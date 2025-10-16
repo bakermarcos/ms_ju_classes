@@ -10,6 +10,11 @@ const Footer = () => {
         <a href={generateWhatsAppLink(messages.general)} target="_blank" rel="noopener noreferrer" className="cta-button">
           <i className="fab fa-whatsapp"></i> Falar com a Teacher Júlia
         </a>
+        <div className="social-links">
+           <a href="https://www.instagram.com/julia_tamietti/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i className="fab fa-instagram"></i>
+          </a>
+        </div>
         <p className="copyright">© {new Date().getFullYear()} Ms. Ju - Todos os direitos reservados.</p>
       </div>
     </footer>

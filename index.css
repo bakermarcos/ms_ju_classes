@@ -49,6 +49,23 @@ header {
   text-decoration: none;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  color: var(--primary-color);
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #c76182; /* A slightly darker shade of primary */
+}
+
+
 .cta-button {
   background-color: #25d366;
   color: #fff;
@@ -235,8 +252,23 @@ footer .cta-button {
   margin-top: 1rem;
 }
 
-footer .copyright {
+.social-links {
   margin-top: 2rem;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 0 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+}
+
+footer .copyright {
+  margin-top: 1.5rem;
   font-size: 0.9rem;
 }
 

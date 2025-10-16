@@ -1,8 +1,8 @@
-// All images are now stored locally as Base64 data URIs to prevent broken links.
+// All images are now stored locally in the /images/ folder for reliability.
 
-export const juliaInBookstore = "https://i.imgur.com/4i6yNEk.jpg";
-export const juliaWithBooks = "https://i.imgur.com/So0r56a.png";
-export const robotsOnPlane = "https://i.imgur.com/xJ4y3vL.png";
-export const juliaStainedGlass = "https://i.imgur.com/BfA2g0J.png";
-export const juliaWithRobot = "https://i.imgur.com/qE4s3qO.png";
-export const msJuFlyer = "https://i.imgur.com/6J7h4g3.png";
+export const juliaInBookstore = "./images/julia-in-bookstore.jpg";
+export const juliaWithBooks = "./images/julia-with-books.png";
+export const robotsOnPlane = "./images/robots-on-plane.png";
+export const juliaStainedGlass = "./images/julia-stained-glass.png";
+export const juliaWithRobot = "./images/julia-with-robot.png";
+export const msJuFlyer = "./images/ms-ju-flyer.png";
