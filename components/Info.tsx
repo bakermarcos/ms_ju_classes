@@ -1,5 +1,5 @@
 import React from 'react';
-import { robotsOnPlane } from '../lib/images';
+import { robotsTraveling } from '../lib/images';
 
 const Info = () => {
   return (
@@ -14,7 +14,7 @@ const Info = () => {
             <p><strong>✏️ Matrícula:</strong> É cobrada uma taxa de matrícula de R$ 200,00 para reserva da vaga.</p>
           </div>
           <div className="info-image">
-            <img src={robotsOnPlane} alt="Mascotes da aula em uma viagem" />
+            <img src={robotsTraveling} alt="Mascotes da aula em uma viagem" />
           </div>
         </div>
       </div>

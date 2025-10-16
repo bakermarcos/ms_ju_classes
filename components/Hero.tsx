@@ -1,6 +1,6 @@
 import React from 'react';
 import { generateWhatsAppLink, messages } from '../lib/whatsapp';
-import { juliaInBookstore } from '../lib/images';
+import { classroomScene, juliaInBookstore } from '../lib/images';
 
 const Hero = () => {
   return (
@@ -14,7 +14,7 @@ const Hero = () => {
           </a>
         </div>
         <div className="hero-image">
-          <img src={juliaInBookstore} alt="Professora Júlia Tamietti em uma livraria infantil" />
+          <img src={classroomScene} alt="Professora Júlia Tamietti em uma sala de aula" />
         </div>
       </div>
     </section>
