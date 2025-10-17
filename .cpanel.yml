@@ -1,6 +1,10 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home4/hg1cef63/public_html
-    - /bin/cp -r dist/* $DEPLOYPATH
-    - /bin/cp dist/.htaccess $DEPLOYPATH/.htaccess
+    - export DEPLOY_PATH=/home4/hg1cef63/public_html
+    # Copia o build
+    - /usr/bin/rsync -rltgoDz --delete ./dist/ $DEPLOY_PATH/
+    # Garante o .htaccess na raiz do public_html
+    - /bin/cp -f ./.htaccess $DEPLOY_PATH/.htaccess
+    # timestamp
+    - /bin/touch $DEPLOY_PATH/.last_deploy_`date +%s`
