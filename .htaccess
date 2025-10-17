@@ -1,7 +1,11 @@
-# Prioriza index.html
-DirectoryIndex index.html
+# Force HTTPS (quando o SSL estiver emitido)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
 
-# SPA (React/Vite)
+DirectoryIndex index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
