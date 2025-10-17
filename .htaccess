@@ -1,16 +1,22 @@
-# Force HTTPS (quando o SSL estiver emitido)
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{HTTPS} !=on
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# --- BEGIN cPanel PHP handler (mantenha) ---
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php83___lsphp .php .php8 .phtml
 </IfModule>
+# --- END cPanel PHP handler ---
 
+# Prioriza index.html como documento inicial
 DirectoryIndex index.html
+
+# SPA routing (Vite/Vue/React): fallback para index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Se for arquivo/pasta real, serve direto
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
+
+  # Caso contrário, redireciona tudo para index.html
   RewriteRule . /index.html [L]
 </IfModule>
