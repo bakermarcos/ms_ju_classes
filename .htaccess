@@ -6,8 +6,16 @@
 
 # Documento inicial
 DirectoryIndex index.html
+
 # Evita conflitos de content-negotiation
 Options -MultiViews
+
+# (Opcional, recomendado) — evita servir imagem/asset antigo do cache externo
+<IfModule mod_headers.c>
+  <FilesMatch "\.(png|jpe?g|gif|svg|webp)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -27,8 +35,7 @@ Options -MultiViews
   RewriteRule ^ index.html [L]
 </IfModule>
 
-# (Opcional) Garante MIME explícito — não é estritamente necessário,
-# mas ajuda se a hospedagem tiver algo estranho de MIME.
+# Tipos MIME explícitos (robustez)
 AddType image/png .png
 AddType image/jpeg .jpg .jpeg
 AddType image/webp .webp
