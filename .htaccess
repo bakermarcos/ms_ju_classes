@@ -4,19 +4,32 @@
 </IfModule>
 # --- END cPanel PHP handler ---
 
-# Prioriza index.html como documento inicial
+# Documento inicial
 DirectoryIndex index.html
+# Evita conflitos de content-negotiation
+Options -MultiViews
 
-# SPA routing (Vite/Vue/React): fallback para index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # Se for arquivo/pasta real, serve direto
+  # 1) Se for arquivo/pasta real, não reescreve
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # Caso contrário, redireciona tudo para index.html
-  RewriteRule . /index.html [L]
+  # 2) Nunca reescrever caminhos estáticos (assets/images/favicon)
+  RewriteCond %{REQUEST_URI} ^/(assets|images|favicon\.png) [NC]
+  RewriteRule ^ - [L]
+
+  # 3) Só faz fallback pra SPA se NÃO houver extensão no caminho
+  RewriteCond %{REQUEST_URI} !\.[a-z0-9]{2,8}$ [NC]
+  RewriteRule ^ index.html [L]
 </IfModule>
+
+# (Opcional) Garante MIME explícito — não é estritamente necessário,
+# mas ajuda se a hospedagem tiver algo estranho de MIME.
+AddType image/png .png
+AddType image/jpeg .jpg .jpeg
+AddType image/webp .webp
+AddType image/svg+xml .svg
