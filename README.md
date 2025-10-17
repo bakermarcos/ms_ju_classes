@@ -57,7 +57,7 @@ Sempre que fizer alterações, gere um novo build e substitua os arquivos em `pu
 
 ## 🔧 Personalizações rápidas
 - Conteúdo textual: componentes em `components/` (ex.: `Hero.tsx`, `About.tsx`, `Pricing.tsx`).
-- Imagens: pasta `images/` (importe direto com `import foto from '@/images/...')`.
+- Imagens: pasta `public/images/` (referenciadas via `lib/images.ts`).
 - Estilos globais: `index.css`.
 - Links para WhatsApp: `lib/whatsapp.ts`.
 

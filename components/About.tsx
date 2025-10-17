@@ -1,5 +1,5 @@
 import React from 'react';
-import juliaAndBooks from '@/images/julia-and-books.png';
+import { juliaAndBooks } from '../lib/images';
 
 const About = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { generateWhatsAppLink, messages } from '../lib/whatsapp';
-import classroomScene from '@/images/classroom.png';
+import { classroomScene } from '../lib/images';
 
 const Hero = () => {
   return (
