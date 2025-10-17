@@ -6,7 +6,7 @@ import {
   juliaStainedGlass,
   juliaWithRobot,
   robotsTraveling,
-} from '../lib/images';
+} from '@/lib/images';
 
 const Gallery = () => {
   const galleryItems = [

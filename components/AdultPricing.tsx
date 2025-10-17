@@ -1,5 +1,5 @@
 import React from 'react';
-import { generateWhatsAppLink, messages } from '../lib/whatsapp';
+import { generateWhatsAppLink, messages } from '@/lib/whatsapp';
 
 const AdultPricing = () => {
   return (
