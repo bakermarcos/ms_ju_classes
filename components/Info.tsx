@@ -1,5 +1,5 @@
 import React from 'react';
-import { robotsTraveling } from '../lib/images';
+import robotsTraveling from '@/images/robots.png';
 
 const Info = () => {
   return (

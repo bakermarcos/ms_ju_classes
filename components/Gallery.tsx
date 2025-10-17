@@ -1,12 +1,10 @@
 import React from 'react';
-import {
-  classroomScene,
-  juliaBookCover,
-  juliaInBookstoreReading,
-  juliaStainedGlass,
-  juliaWithRobot,
-  robotsTraveling,
-} from '../lib/images';
+import classroomScene from '@/images/classroom.png';
+import juliaBookCover from '@/images/julia-book.png';
+import juliaInBookstoreReading from '@/images/julia-in-bookstore-reading.png';
+import juliaStainedGlass from '@/images/julia-vitral.png';
+import juliaWithRobot from '@/images/julia-with-robot-and-book.png';
+import robotsTraveling from '@/images/robots.png';
 
 const Gallery = () => {
   const galleryItems = [

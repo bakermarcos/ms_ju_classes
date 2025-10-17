@@ -1,9 +1,0 @@
-# Forçar HTTPS e WWW opcionalmente (quando o SSL estiver ativo)
-RewriteEngine On
-#RewriteCond %{HTTP:X-Forwarded-Proto} !https
-#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# SPA - redirecionar tudo para index.html
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]
