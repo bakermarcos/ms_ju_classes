@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="container hero-container">
         <div className="hero-text">
           <h1>Aulas de Inglês Lúdicas e Personalizadas</h1>
-          <p>Com a Teacher Júlia Tamietti, você ou seu filho(a) aprende inglês de forma natural, divertida e eficaz. Desperte a curiosidade e o amor por um novo idioma!</p>
+          <p>Com a Ms. Ju, você ou seu filho(a) aprende inglês de forma natural, divertida e eficaz. Desperte a curiosidade e o amor por um novo idioma!</p>
           <a href={generateWhatsAppLink(messages.general)} target="_blank" rel="noopener noreferrer" className="cta-button">
             <i className="fab fa-whatsapp"></i> Agende uma conversa
           </a>

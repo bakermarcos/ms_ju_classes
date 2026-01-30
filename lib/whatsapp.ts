@@ -1,7 +1,7 @@
 const WHATSAPP_NUMBER = "5531983888354";
 const BASE_URL = "https://wa.me/";
 
-export const generateWhatsAppLink = (message) => {
+export const generateWhatsAppLink = (message: string) => {
   const encodedMessage = encodeURIComponent(message);
   return `${BASE_URL}${WHATSAPP_NUMBER}?text=${encodedMessage}`;
 };
@@ -17,3 +17,5 @@ export const messages = {
   adults_online_3x: "Olá! Gostaria de saber mais sobre o plano para adultos de 3x por semana (Online).",
   adults_presencial_1x: "Olá! Gostaria de saber mais sobre o plano para adultos de 1x por semana (Presencial).",
 };
+
+export type MessageKey = keyof typeof messages;
