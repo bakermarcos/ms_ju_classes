@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOY_PATH=/home4/hg1cef63/public_html
+    - export DEPLOY_PATH=/home2/hg1cef63/public_html
     - /bin/mkdir -p "$DEPLOY_PATH"
     - /usr/bin/rsync -az --delete --no-owner --no-group ./dist/ "$DEPLOY_PATH/"
     - /bin/cp -f ./.htaccess "$DEPLOY_PATH/.htaccess"
