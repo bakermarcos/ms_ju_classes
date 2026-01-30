@@ -1,5 +1,5 @@
 import React from 'react';
-import { juliaAndBooks } from '@/lib/images';
+import { teaching } from '@/lib/images';
 
 const About = () => {
   return (
@@ -8,7 +8,7 @@ const About = () => {
         <h2 className="section-title">Uma Metodologia Única</h2>
         <div className="about-content">
           <div className="about-image">
-            <img src={juliaAndBooks} alt="Professora Júlia segurando seus livros" />
+            <img src={teaching} alt="Ensinando crianças em ambiente de aula" />
           </div>
           <div className="about-text">
             <p>As aulas particulares têm duração de 1 hora e 10 minutos e são totalmente personalizadas de acordo com o perfil e os objetivos de cada aluno. A proposta é criar um ambiente de aprendizado dinâmico e envolvente, que estimule a curiosidade, o interesse e a vivência real da língua em diferentes contextos.</p>

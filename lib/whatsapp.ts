@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "5531986885310";
+const WHATSAPP_NUMBER = "5531983888354";
 const BASE_URL = "https://wa.me/";
 
 export const generateWhatsAppLink = (message) => {

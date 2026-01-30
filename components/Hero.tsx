@@ -14,7 +14,13 @@ const Hero = () => {
           </a>
         </div>
         <div className="hero-image">
-          <img src={classroomScene} alt="Professora Júlia Tamietti em uma sala de aula" />
+          <img
+            src={classroomScene}
+            alt="Professora Júlia Tamietti em uma sala de aula"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
         </div>
       </div>
     </section>
