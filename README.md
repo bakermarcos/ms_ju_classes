@@ -32,7 +32,7 @@ npm install
 npm run dev
 ```
 
-Acesse `http://localhost:5173` (ou a porta exibida no terminal) para visualizar a página.
+Acesse `http://localhost:3000` (ou a porta exibida no terminal) para visualizar a página.
 
 ## 📦 Gerar build de produção
 
