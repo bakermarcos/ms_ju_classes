@@ -252,6 +252,31 @@ footer .cta-button {
   margin-top: 1rem;
 }
 
+.store-highlight {
+  margin-top: 2rem;
+}
+
+.store-highlight h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.store-highlight p {
+  margin-bottom: 0.75rem;
+}
+
+.store-link {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s ease;
+}
+
+.store-link:hover {
+  color: var(--accent-color);
+}
+
 .social-links {
   margin-top: 2rem;
 }

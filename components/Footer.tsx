@@ -10,6 +10,13 @@ const Footer = () => {
         <a href={generateWhatsAppLink(messages.general)} target="_blank" rel="noopener noreferrer" className="cta-button">
           <i className="fab fa-whatsapp"></i> Falar com a Ms. Ju
         </a>
+        <div className="store-highlight">
+          <h3>Conheça a Ms Ju Store</h3>
+          <p>Livros infantis e livros próprios além de materiais para apoiar o aprendizado.</p>
+          <a href="https://msjuliatamietti.com.br" target="_blank" rel="noopener noreferrer" className="store-link">
+            Acesse a loja agora
+          </a>
+        </div>
         <div className="social-links">
            <a href="https://www.instagram.com/ms.ju_tamietti/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <i className="fab fa-instagram"></i>
