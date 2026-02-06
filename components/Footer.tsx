@@ -11,7 +11,7 @@ const Footer = () => {
           <i className="fab fa-whatsapp"></i> Falar com a Ms. Ju
         </a>
         <div className="social-links">
-           <a href="https://www.instagram.com/julia_tamietti/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+           <a href="https://www.instagram.com/ms.ju_tamietti/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <i className="fab fa-instagram"></i>
           </a>
         </div>

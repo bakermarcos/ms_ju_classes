@@ -7,7 +7,7 @@ const Header = () => {
       <div className="container header-content">
         <a href="#" className="logo">Ms. Ju</a>
         <div className="header-actions">
-          <a href="https://www.instagram.com/julia_tamietti/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
+          <a href="https://www.instagram.com/ms.ju_tamietti/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
             <i className="fab fa-instagram"></i>
           </a>
           <a href={generateWhatsAppLink(messages.general)} target="_blank" rel="noopener noreferrer" className="cta-button">
