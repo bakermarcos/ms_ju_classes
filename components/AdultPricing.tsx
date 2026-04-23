@@ -2,7 +2,8 @@ import React from 'react';
 import { generateWhatsAppLink, messages } from '@/lib/whatsapp';
 
 const plans = [
-  { title: '2x por Semana', price: 'R$ 580,00', modality: 'Online', messageKey: 'adults_online_2x' },
+  { title: '1x por Semana', price: 'R$ 490,00', modality: 'Online', messageKey: 'adults_online_1x', description: 'Inclui kit de materiais mensais' },
+  { title: '2x por Semana', price: 'R$ 730,00', modality: 'Online', messageKey: 'adults_online_2x', description: 'Inclui kit de materiais mensais' },
 ] as const;
 
 const AdultPricing = () => {
@@ -12,7 +13,7 @@ const AdultPricing = () => {
         <h2 className="section-title">Planos para Adultos</h2>
         <p className="section-subtitle">Planos flexíveis para você alcançar seus objetivos, seja para viagens, trabalho ou simplesmente para destravar a conversação.</p>
         <div className="pricing-grid">
-          {plans.map(({ title, price, modality, messageKey }) => (
+          {plans.map(({ title, price, modality, messageKey, description }) => (
             <div className="pricing-card" key={title + modality}>
               <h3>{title}</h3>
               <div className="price">
@@ -20,6 +21,7 @@ const AdultPricing = () => {
                 <span>/mês</span>
               </div>
               <p>{modality}</p>
+              <p className="description">{description}</p>
               <a
                 href={generateWhatsAppLink(messages[messageKey])}
                 target="_blank"
