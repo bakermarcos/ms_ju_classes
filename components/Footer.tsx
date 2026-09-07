@@ -1,31 +1,41 @@
 import React from 'react';
 import { generateWhatsAppLink, messages } from '@/lib/whatsapp';
+import { msJuLogo } from '@/lib/images';
+import { INSTAGRAM_URL } from '@/lib/config';
+import { InstagramIcon, WhatsAppIcon } from './Icons';
 
-const Footer = () => {
-  return (
-    <footer>
-      <div className="container">
-        <h2>Vamos começar essa jornada juntos?</h2>
-        <p>Entre em contato para tirar suas dúvidas e garantir sua vaga!</p>
-        <a href={generateWhatsAppLink(messages.general)} target="_blank" rel="noopener noreferrer" className="cta-button">
-          <i className="fab fa-whatsapp"></i> Falar com a Ms. Ju
+const Footer = () => (
+  <footer className="site-footer">
+    <div className="container">
+      <div className="footer-cta" data-reveal="out">
+        <img className="footer-logo" src={msJuLogo} alt="Ms. Ju — Pedagogia Bilíngue" loading="lazy" decoding="async" />
+        <h2>Vamos marcar a primeira aula?</h2>
+        <p>Me chama no WhatsApp para tirar dúvidas e reservar a vaga.</p>
+        <a
+          href={generateWhatsAppLink(messages.general)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button button-primary"
+        >
+          <WhatsAppIcon />
+          Falar com a Ms. Ju
         </a>
-        <div className="store-highlight">
-          <h3>Conheça a Ms Ju Store</h3>
-          <p>Livros infantis e livros próprios além de materiais para apoiar o aprendizado.</p>
-          <a href="https://msjuliatamietti.com.br" target="_blank" rel="noopener noreferrer" className="store-link">
-            Acesse a loja agora
-          </a>
-        </div>
-        <div className="social-links">
-           <a href="https://www.instagram.com/ms.ju_tamietti/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <i className="fab fa-instagram"></i>
-          </a>
-        </div>
-        <p className="copyright">© {new Date().getFullYear()} Ms. Ju - Todos os direitos reservados.</p>
       </div>
-    </footer>
-  );
-};
+
+      <div className="footer-bottom">
+        <a
+          href={INSTAGRAM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon-button"
+          aria-label="Instagram da Ms. Ju"
+        >
+          <InstagramIcon />
+        </a>
+        <p className="copyright">© {new Date().getFullYear()} Ms. Ju · Pedagogia Bilíngue</p>
+      </div>
+    </div>
+  </footer>
+);
 
 export default Footer;

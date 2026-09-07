@@ -1,36 +1,32 @@
 import React from 'react';
-import { generateWhatsAppLink, messages } from '@/lib/whatsapp';
-
-const plans = [
-  { title: '1x por Semana', price: 'R$ 680,00', modality: 'Presencial', messageKey: 'kids_1x' },
-  { title: '2x por Semana', price: 'R$ 960,00', modality: 'Presencial', messageKey: 'kids_2x' },
-  { title: '3x por Semana', price: 'R$ 1.340,00', modality: 'Presencial', messageKey: 'kids_3x' },
-  { title: '2x por Semana', price: 'R$ 580,00', modality: 'Online', messageKey: 'kids_online' },
-] as const;
+import { useSiteConfig } from '@/lib/useSiteConfig';
+import PlanCard from './PlanCard';
 
 const Pricing = () => {
+  const { kidsPlans, adultPlans } = useSiteConfig();
+
   return (
-    <section id="pricing">
+    <section id="planos" className="section section-tinted">
       <div className="container">
-        <h2 className="section-title">Planos para Crianças</h2>
-        <div className="pricing-grid">
-          {plans.map(({ title, price, modality, messageKey }) => (
-            <div className="pricing-card" key={title + modality}>
-              <h3>{title}</h3>
-              <div className="price">
-                {price}
-                <span>/mês</span>
-              </div>
-              <p>{modality}</p>
-              <a
-                href={generateWhatsAppLink(messages[messageKey])}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cta-button"
-              >
-                <i className="fab fa-whatsapp"></i> Quero esse!
-              </a>
-            </div>
+        <header className="section-head" data-reveal="out">
+          <p className="eyebrow">Planos</p>
+          <h2 className="section-title">Escolha o ritmo que cabe na sua rotina</h2>
+        </header>
+
+        <h3 className="group-title" data-reveal="out">Para crianças</h3>
+        <div className="plan-grid">
+          {kidsPlans.map((plan) => (
+            <PlanCard key={`${plan.title}-${plan.modality}`} {...plan} />
+          ))}
+        </div>
+
+        <h3 className="group-title" data-reveal="out">Para adultos</h3>
+        <p className="group-subtitle" data-reveal="out">
+          Para quem precisa destravar a conversação, viajar ou usar o inglês no trabalho.
+        </p>
+        <div className="plan-grid plan-grid-adults">
+          {adultPlans.map((plan) => (
+            <PlanCard key={`${plan.title}-${plan.modality}`} {...plan} />
           ))}
         </div>
       </div>

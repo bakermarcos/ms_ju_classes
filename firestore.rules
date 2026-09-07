@@ -1,0 +1,19 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // O site é estático e anônimo: a landing page só lê a configuração.
+    // Escrita acontece exclusivamente pelo Console do Firebase (que usa
+    // credenciais de admin e ignora estas regras).
+    match /config/{document} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Qualquer outra coleção fica fechada.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
